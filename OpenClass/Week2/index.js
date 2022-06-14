@@ -165,7 +165,18 @@ while(currentCupsOfRice < requiredCupsOfRice);
 console.log("We have enough rice!");
 */
 
+/*
 var number = 0;
 while(number != 10){
     console.log(++number);
-}
+}*/
+
+var userNumber = parseInt(prompt("Enter any number: ")); 
+do {
+    console.log(userNumber);
+    
+    //userNumber = parseInt(userNumber) + 6;
+    userNumber += 6;
+} 
+//while (parseInt(userNumber) <= 100);
+while (userNumber <= 100);

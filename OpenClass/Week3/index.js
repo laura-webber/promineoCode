@@ -31,3 +31,30 @@ function checkout(balance, price){
 
 console.log(checkout(cardBalance, price));
 */
+
+/*
+var a = prompt("Enter a word: ");
+
+function speakFriend(element){
+    if(element != "Mellon"){
+        return "Access Denied";
+    }else {
+        return "Enter";
+    }
+}
+
+console.log(speakFriend(a));
+*/
+
+
+let x = parseInt(prompt("Please enter a number: "));
+
+function loopUntilX(element){
+    for(i = 0; i < element; i++){
+        console.log(i);
+
+    }
+    return true;
+}
+
+console.log(loopUntilX(x));

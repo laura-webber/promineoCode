@@ -183,7 +183,8 @@ function willBuyDrink(isHotOutside, moneyInPocket){
 console.log(willBuyDrink(true, 10.5));
 
 /***************************************************************************************/
-// Question 13
+// Question 13 - This function takes an array as a parameter and checks each element of 
+// the array to see if it is a multiple of 3. Then returns an array with boolean values.
 /***************************************************************************************/
 
 function isMultipleOf3(array){

@@ -9,6 +9,7 @@ isLoginSuccessful()
 */
 
 
+/*
 
 function handleEvent(value){
     console.log(value);
@@ -34,3 +35,42 @@ function IsItANumber(value){
 
 
 wasItSuccessful(IsItANumber("3"));
+
+*/
+
+
+let p = new Promise((resolve, reject) => {
+    let a = 1 + 2;
+    if (a == 2){
+        resolve('Success')
+    }else{
+        reject('Failed')
+    }
+})
+
+
+p.then((message) => {
+    console.log('This is in the then ' + message);
+}).catch((message) => {
+    console.log('This is in the catch ' + message)
+})
+
+
+
+
+
+
+let b = (value) => {  
+    return new Promise((resolve, reject) => {
+    //let b = 1 + 2;
+    if (value == parseInt(value)){
+        resolve('Success');
+    } else {
+        reject(Error('Failed'));
+    }
+});
+}
+
+
+
+console.log(b('o'));

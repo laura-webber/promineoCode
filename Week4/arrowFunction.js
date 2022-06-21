@@ -10,5 +10,5 @@ let someFunction = (a, b) => {
 	return result;
 }
 
-console.log(someFunction('Hi',3));
+console.log(someFunction('Hello',3));
 

@@ -7,13 +7,13 @@ const getNumbers = () => {
 
     for (let i = 0; i < 3; i++) {
         let question = parseInt(prompt('Pick a number'));
-        console.log('question is: ', question)
+        //console.log('question is: ', question)
         while(isNaN(question)){
             question = parseInt(prompt('Pick a number'));
         }
 
         currentNumber = currentNumber + question;
-        console.log('current turn at ', i)
+        //console.log('current turn at ', i)
     }
 
     return currentNumber * 3;

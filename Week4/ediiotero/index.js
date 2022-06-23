@@ -44,9 +44,10 @@
         
 // }
 
-// let instance = multiplyBy3();
+// multiplyBy3();
 
 
+/*
 function multiplyBy3(){
     
     let number = [];
@@ -67,7 +68,7 @@ function multiplyBy3(){
 
 multiplyBy3();
 
-
+*/
 
 
 
@@ -85,9 +86,24 @@ multiplyBy3();
 
 
 
-// const list = ["My name is ", "I live in ", "My favorite food is "];
+const list = ["My name is ", "I live in ", "My favorite food is "];
 
-// const combine = (sentence, word) => `${sentence} ${word}`;
+const combine = (sentence) => {
+    let answer = [];
+    let word = '';
+    for (let i = 0; i < sentence.length; i++){
+        word = prompt(sentence[i]);
+        answer[i] = sentence[i] + word;
+        
+    }
+    for(let i = 0; i < answer.length; i++){
+        alert(answer[i]);
+    }
+    // display the array
+    console.log(answer);
+}
+
+combine(list);
 
 // const finishSentence = (array, callback) => {
 //     for (let i = 0; i < array.length; i++) {

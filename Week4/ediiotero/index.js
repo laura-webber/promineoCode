@@ -22,12 +22,7 @@
 
 // console.log(getNumbers())
 
-
-
-
-
-
-
+// =========================================
 
 // function multiplyBy3(){
 //     let sum = 0;
@@ -71,7 +66,6 @@ multiplyBy3();
 */
 
 
-
 // ============================================
 
 // Write a function called 'finishSentence' that takes two inputs an array and a function
@@ -82,54 +76,47 @@ multiplyBy3();
 //*** Bonus: accomplish the same result without the finishSentence function and use an array method
 
 
-
-
-
-
 const list = ["My name is ", "I live in ", "My favorite food is "];
 
-const combine = (sentence) => {
-    let answer = [];
-    let word = '';
-    for (let i = 0; i < sentence.length; i++){
-        word = prompt(sentence[i]);
-        answer[i] = sentence[i] + word;
+// MY SOLUTION
+
+// const combine = (sentence) => {
+//     let answer = [];
+//     let word = '';
+//     for (let i = 0; i < sentence.length; i++){
+//         word = prompt(sentence[i]);
+//         answer[i] = sentence[i] + word;
         
-    }
-    for(let i = 0; i < answer.length; i++){
-        alert(answer[i]);
-    }
-    // display the array
-    console.log(answer);
-}
-
-combine(list);
-
-// const finishSentence = (array, callback) => {
-//     for (let i = 0; i < array.length; i++) {
-//         const word = prompt(array[i]);
-//         alert(callback(array[i], word))
 //     }
-// };
+//     for(let i = 0; i < answer.length; i++){
+//         alert(answer[i]);
+//     }
+//     // display the array
+//     console.log(answer);
+// }
 
-// finishSentence(list, combine);
+// combine(list);
+
+
+// Ediiotero's SOLUTION
+
+const combine = (sentence, word) => `${sentence} ${word}`;
+
+const finishSentence = (array, callback) => {
+    for (let i = 0; i < array.length; i++) {
+        const word = prompt(array[i]);
+        alert(callback(array[i], word))
+    }
+};
+
+finishSentence(list, combine);
+
+// SOLUTION USING ARRAY METHOD
 
 // list.forEach(item => {
 //     const word = prompt(item);
 //     alert(combine(item, word))
 // });
-
-// function combine(){
-
-// }
-
-// function finishSentence(array, func){
-//     let results = [];
-//     for(let i = 0; i < array.length; i++){
-//         results = array + prompt(array[i]); 
-//     }
-
-// }
 
 
 
@@ -143,6 +130,28 @@ combine(list);
 // Use the promise to alert "you win" if resolved
 // and "you lose" if rejected
 
+
+let p = new Promise((resolve, reject) => {
+    let number = prompt("Guess a number: ");
+    setTimeout = 3000;
+    if (number >= 10){
+        resolve('Success')
+        alert("you win");
+    }else{
+        reject('Failed')
+        alert('you lose');
+    }
+})
+
+
+p.then(() => {
+    alert("you win");
+}).catch((message) => {
+    alert("you lose");
+})
+
+
+
 // const myPromise = new Promise(function (resolve, reject) {
 //     const guess = prompt("Guess a number!");
 //     setTimeout(() => {
@@ -153,25 +162,5 @@ combine(list);
 //         }
 //     }, 3000)
 // });
-
-// let p = new Promise((resolve, reject) => {
-//     let number = prompt("Guess a number: ");
-//     setTimeout = 3000;
-//     if (number >= 10){
-//         resolve('Success')
-//         alert("you win");
-//     }else{
-//         reject('Failed')
-//         alert('you lose');
-//     }
-// })
-
-
-// p.then(() => {
-//     alert("you win");
-// }).catch((message) => {
-//     alert("you lose");
-// })
-
 
 // myPromise.then(value => alert(value)).catch(err => alert(err));

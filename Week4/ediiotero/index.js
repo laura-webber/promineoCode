@@ -50,27 +50,22 @@
 function multiplyBy3(){
     
     let number = [];
-        number = parseInt(prompt("Enter a number")) + parseInt(prompt("Enter a number")) + parseInt(prompt("Enter a number"));
-       
-     
+    for(let i = 0; i < 3; i++){
+        number[i] = prompt("Enter a number") ;
+        while(number[i] != parseInt(number[i])){
+            console.log("You didn't enter a valid number")
+            number[i] = prompt("Enter a number");
+        }
+    }
     let sum = number.reduce(function(x,y){
-        return x + y;
+        return parseInt(x) + parseInt(y);
     });
-
-    console.log(sum);
+    // console.log(number);
+    console.log(sum*3);
 }
-    // while(number != parseInt(number)){
-    //     alert("You didn't choose a valid number");
-    //     number = prompt("Enter a number");
-    // }
-    
-    // sum += number;
-    
-    
-        
 
 
-let instance = multiplyBy3();
+multiplyBy3();
 
 
 

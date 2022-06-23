@@ -4,3 +4,5 @@ var x = 10;
 }
 
 const pi = 3.14159;
+
+console.log(Math.PI);

@@ -100,16 +100,16 @@ const list = ["My name is ", "I live in ", "My favorite food is "];
 
 // Ediiotero's SOLUTION
 
-const combine = (sentence, word) => `${sentence} ${word}`;
+// const combine = (sentence, word) => `${sentence} ${word}`;
 
-const finishSentence = (array, callback) => {
-    for (let i = 0; i < array.length; i++) {
-        const word = prompt(array[i]);
-        alert(callback(array[i], word))
-    }
-};
+// const finishSentence = (array, callback) => {
+//     for (let i = 0; i < array.length; i++) {
+//         const word = prompt(array[i]);
+//         alert(callback(array[i], word))
+//     }
+// };
 
-finishSentence(list, combine);
+// finishSentence(list, combine);
 
 // SOLUTION USING ARRAY METHOD
 
@@ -133,22 +133,21 @@ finishSentence(list, combine);
 
 let p = new Promise((resolve, reject) => {
     let number = prompt("Guess a number: ");
-    setTimeout = 3000;
-    if (number >= 10){
-        resolve('Success')
-        alert("you win");
-    }else{
-        reject('Failed')
-        alert('you lose');
-    }
-})
+    setTimeout(() => {
+        if (number >= 10){
+            resolve;
+            alert("you win");
+        }else{
+            reject;
+            alert('you lose');
+        }
+    }, 3000)
+    
+});
 
 
-p.then(() => {
-    alert("you win");
-}).catch((message) => {
-    alert("you lose");
-})
+p.then(value => alert(value))
+ .catch(value => alert(value))
 
 
 

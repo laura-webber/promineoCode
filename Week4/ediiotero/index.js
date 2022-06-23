@@ -53,7 +53,8 @@ function multiplyBy3(){
     for(let i = 0; i < 3; i++){
         number[i] = prompt("Enter a number") ;
         while(number[i] != parseInt(number[i])){
-            console.log("You didn't enter a valid number")
+            alert("You didn't enter a valid number")
+            //console.log("You didn't enter a valid number");
             number[i] = prompt("Enter a number");
         }
     }

@@ -64,7 +64,6 @@ function multiplyBy3(){
     console.log(sum*3);
 }
 
-
 multiplyBy3();
 
 

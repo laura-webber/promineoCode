@@ -53,16 +53,21 @@ num3 = prompt();
 // and combine the element in the array with the word given in the prompt and alert the answer
 //*** Bonus: accomplish the same result without the finishSentence function and use an array method
 
-const list = ["My name is ", "I live in ", "My favorite food is "];
 
-const combine = (sentence, word) => `${sentence} ${word}`;
 
-const finishSentence = (array, callback) => {
-    for (let i = 0; i < array.length; i++) {
-        const word = prompt(array[i]);
-        alert(callback(array[i], word))
-    }
-};
+
+
+
+// const list = ["My name is ", "I live in ", "My favorite food is "];
+
+// const combine = (sentence, word) => `${sentence} ${word}`;
+
+// const finishSentence = (array, callback) => {
+//     for (let i = 0; i < array.length; i++) {
+//         const word = prompt(array[i]);
+//         alert(callback(array[i], word))
+//     }
+// };
 
 // finishSentence(list, combine);
 
@@ -71,17 +76,17 @@ const finishSentence = (array, callback) => {
 //     alert(combine(item, word))
 // });
 
-function combine(){
+// function combine(){
 
-}
+// }
 
-function finishSentence(array, func){
-    let results = [];
-    for(let i = 0; i < array.length; i++){
-        results = array + prompt(array[i]); 
-    }
+// function finishSentence(array, func){
+//     let results = [];
+//     for(let i = 0; i < array.length; i++){
+//         results = array + prompt(array[i]); 
+//     }
 
-}
+// }
 
 
 
@@ -95,33 +100,35 @@ function finishSentence(array, func){
 // Use the promise to alert "you win" if resolved
 // and "you lose" if rejected
 
-const myPromise = new Promise(function (resolve, reject) {
-    const guess = prompt("Guess a number!");
-    setTimeout(() => {
-        if(guess >= 10){
-            resolve("You win!")
-        }else{
-            reject("You lose")
-        }
-    }, 3000)
-});
+// const myPromise = new Promise(function (resolve, reject) {
+//     const guess = prompt("Guess a number!");
+//     setTimeout(() => {
+//         if(guess >= 10){
+//             resolve("You win!")
+//         }else{
+//             reject("You lose")
+//         }
+//     }, 3000)
+// });
 
-let p = new Promise((resolve, reject) => {
-    let number = prompt("Guess a number: ");
-    setTimeout = 3000;
-    if (number >= 10){
-        resolve('Success')
-        alert("you win");
-    }else{
-        reject('Failed')
-        alert('you lose');
-    }
-})
+// let p = new Promise((resolve, reject) => {
+//     let number = prompt("Guess a number: ");
+//     setTimeout = 3000;
+//     if (number >= 10){
+//         resolve('Success')
+//         alert("you win");
+//     }else{
+//         reject('Failed')
+//         alert('you lose');
+//     }
+// })
 
 
-p.then(() => {
-    alert("you win");
-}).catch((message) => {
-    alert("you lose");
-})
-myPromise.then(value => alert(value)).catch(err => alert(err));
+// p.then(() => {
+//     alert("you win");
+// }).catch((message) => {
+//     alert("you lose");
+// })
+
+
+// myPromise.then(value => alert(value)).catch(err => alert(err));

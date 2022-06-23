@@ -3,6 +3,7 @@
 // and prompt the user again
 
 
+<<<<<<< HEAD
 // const getNumbers = () => {
 //     let currentNumber = 0;
 
@@ -12,6 +13,18 @@
 //         while(isNaN(question)){
 //             question = parseInt(prompt('Pick a number'));
 //         }
+=======
+    for (let i = 0; i < 3; i++) {
+        let question = parseInt(prompt('Pick a number'));
+        //console.log('question is: ', question)
+        while(isNaN(question)){
+            question = parseInt(prompt('Pick a number'));
+        }
+
+        currentNumber = currentNumber + question;
+        //console.log('current turn at ', i)
+    }
+>>>>>>> 57167d39617b852f260c5b7294e9a8992092e09b
 
 //         currentNumber = currentNumber + question;
 //         //console.log('current turn at ', i)

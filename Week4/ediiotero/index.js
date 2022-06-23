@@ -1,9 +1,8 @@
 // Write a function that asks the user for 3 numbers, adds them up and multiply the sum by 3
-// You must check that the users inputs is a number if it isn't alter the user 
+// You must check that the users inputs is a number if it isn't alert the user 
 // and prompt the user again
 
 
-<<<<<<< HEAD
 // const getNumbers = () => {
 //     let currentNumber = 0;
 
@@ -13,18 +12,6 @@
 //         while(isNaN(question)){
 //             question = parseInt(prompt('Pick a number'));
 //         }
-=======
-    for (let i = 0; i < 3; i++) {
-        let question = parseInt(prompt('Pick a number'));
-        //console.log('question is: ', question)
-        while(isNaN(question)){
-            question = parseInt(prompt('Pick a number'));
-        }
-
-        currentNumber = currentNumber + question;
-        //console.log('current turn at ', i)
-    }
->>>>>>> 57167d39617b852f260c5b7294e9a8992092e09b
 
 //         currentNumber = currentNumber + question;
 //         //console.log('current turn at ', i)
@@ -42,24 +29,48 @@
 
 
 
-function multiplyBy3(){
-    let sum = 0;
-    let number = prompt("Enter a number");
-    if (number == parseInt(number)){
-        sum += number;
-    
-        console.log(sum * 3);
-        
-    }
-    else{
-        console.log(" You didn't enter a number!");
-        
-    }
+// function multiplyBy3(){
+//     let sum = 0;
+//     let number = prompt("Enter a number");
 
+//     while(number != parseInt(number)){
+//         alert("You didn't choose a valid number");
+//         number = prompt("Enter a number");
+//     }
+    
+//     sum += number;
+    
+//     console.log(sum * 3);
+        
+// }
+
+// let instance = multiplyBy3();
+
+
+function multiplyBy3(){
+    
+    let number = [];
+        number = parseInt(prompt("Enter a number")) + parseInt(prompt("Enter a number")) + parseInt(prompt("Enter a number"));
+       
+     
+    let sum = number.reduce(function(x,y){
+        return x + y;
+    });
+
+    console.log(sum);
 }
+    // while(number != parseInt(number)){
+    //     alert("You didn't choose a valid number");
+    //     number = prompt("Enter a number");
+    // }
+    
+    // sum += number;
+    
+    
+        
+
 
 let instance = multiplyBy3();
-
 
 
 

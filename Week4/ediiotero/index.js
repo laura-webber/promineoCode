@@ -2,44 +2,52 @@
 // You must check that the users inputs is a number if it isn't alter the user 
 // and prompt the user again
 
-const getNumbers = () => {
-    let currentNumber = 0;
 
-    for (let i = 0; i < 3; i++) {
-        let question = parseInt(prompt('Pick a number'));
-        console.log('question is: ', question)
-        while(isNaN(question)){
-            question = parseInt(prompt('Pick a number'));
-        }
+// const getNumbers = () => {
+//     let currentNumber = 0;
 
-        currentNumber = currentNumber + question;
-        console.log('current turn at ', i)
-    }
+//     for (let i = 0; i < 3; i++) {
+//         let question = parseInt(prompt('Pick a number'));
+//         //console.log('question is: ', question)
+//         while(isNaN(question)){
+//             question = parseInt(prompt('Pick a number'));
+//         }
 
-    return currentNumber * 3;
-}
+//         currentNumber = currentNumber + question;
+//         //console.log('current turn at ', i)
+//     }
+
+//     return currentNumber * 3;
+// }
 
 // console.log(getNumbers())
 
-/*
 
-function multiplyBy3(num1, num2, num3){
-    if ( num1 == parseInt(num1) && num2 == parseInt(num2) && num3 == parseInt(num3)){
-        const result = num1 + num2 + num3;
-        console.log(result * 3);
+
+
+
+
+
+
+function multiplyBy3(){
+    let sum = 0;
+    let number = prompt("Enter a number");
+    if (number == parseInt(number)){
+        sum += number;
+    
+        console.log(sum * 3);
+        
     }
     else{
-        console.log(" You didn't enter 3 numbers!");
+        console.log(" You didn't enter a number!");
         
     }
 
 }
 
-num1 = prompt();
-num2 = prompt();
-num3 = prompt(); 
+let instance = multiplyBy3();
 
-*/
+
 
 
 

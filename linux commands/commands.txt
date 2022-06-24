@@ -1,0 +1,80 @@
+upower -i /org/freedesktop/UPower/devices/battery_BAT
+
+RUN a program
+
+./{filename}
+
+sudo apt-get install xfce4
+sudo apt install xfce4
+
+sudo apt remove {filename}
+
+sudo apt autoremove
+
+tar xf {filename}
+./configure
+make
+sudo apt install {filename}
+
+cat {filename}
+
+rm 
+
+cp filename newfilename
+
+
+
+startx
+
+
+./a.out
+
+touch {filename}
+
+vim filename
+
+sudo apt install g++
+
+sudo apt install python3
+
+
+sudo apt install bluez blueman
+
+
+// EDIT repositories
+
+sudo nano /etc/apt/sources.list
+
+
+sudo snap install --classic code
+
+htop
+
+top
+
+sudo apt-get dist-upgrade
+
+
+sudo apt-get update
+
+sudo apt-get upgrade
+
+sudo apt-get clean
+
+
+
+nmcli dev status
+
+nmcli dev wifi list
+
+nmcli dev radio wifi
+
+sudo nmcli dev wifi connect *SSID* password *password*
+
+
+
+sudo snap install network-manager
+
+
+sudo apt-get install net-tools // for ifconfig
+

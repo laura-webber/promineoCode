@@ -7,17 +7,16 @@ for(i = 0; i < array1.length; i++){
 
 
 // print the 3rd element in array1
+console.log(array1[2]);
 
-//console.log(array1[2]);
 // print the last element in array1
-
+console.log(array1[array1.length - 1]);
 //console.log(array1[5]);
 
 // add 16 and 3 to array1
 array1.push(16, 3);
-//console.log(array1.length);
 
-//console.log(array1.length);
+
 /*
 console.log("This is the new array after adding those 2 elements: ");
 for(i = 0; i < array1.length; i++){
@@ -30,14 +29,10 @@ for(i = 0; i < array1.length; i++){
 array1.sort();
 
 //array1.push(32, 51, 62, 94);
-
-
 // console.log("And just to test how the computer is actually sorting, I added 32, 51, 62, and 94 to the array");
-
 // for(i = 0; i < array1.length; i++){
 //     console.log(array1[i]);
 // }
-
 //console.log ("And this is the element occupying the third position in the array: ")
 //console.log(array1[2]);
 
@@ -45,16 +40,29 @@ array1.sort();
 
 
 // create a variable called myTodoList that holds an empty array
+let myTodoList = [];
 
 // add three todo items to the array using a built-in array method
+myTodoList.push("item1", "item2", "item3");
 
 // remove the second item in the array
 
+myTodoList.splice(1,1);
+console.log(myTodoList);
 // create another array, yourTodoList, and add two todo items
+let yourTodoList = []
+yourTodoList.push("item1", "item2")
 
 // create another array, ourTodoList
-// combine myTodoList and yourTodoList into ourTodoList
 
+let ourTodoList = []
+// combine myTodoList and yourTodoList into ourTodoList
+ourTodoList = myTodoList + yourTodoList
+
+// ourTodoList = myTodoList;
+// ourTodoList += yourTodoList
+
+console.log(ourTodoList)
 
 // sort the following array from Z-A
 

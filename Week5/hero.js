@@ -3,6 +3,7 @@
 // 2 console log using a template literal "shipping to 123 Main street Gotham NY 12345" 
 // 3 add a property of "orderNum" and set it to 111222, change age to 44, console.log the object
 
+/*
 const customer = {
     name: "Toby",
     age: 32,
@@ -17,7 +18,7 @@ const customer = {
 console.log(customer.name)
 console.log(`shipping to ${customer.address.street} ${customer.address.city} ${customer.address.state} ${customer.address.zip}`)
 
-
+*/
 
 // ==================================
 
@@ -34,7 +35,7 @@ class Hero {
     }
 
     attack(){
-        return power + 5
+        return this.power + 5
     }
 }
 
@@ -48,7 +49,7 @@ class Hero {
 //         super();
 //         this.name = name
 //         this.health = health
-//         this.power =power
+//         this.power = power
 //     }
 
 //     magic(){
@@ -62,14 +63,14 @@ class Villain extends Hero {
     }
 
     magic(){
-        return power * 2
+        return this.power * 2
     }
 }
 
 // Create a hero and a villain and log out all of their properties
 
-let hero1 = new Hero('Gandalf','200','Levitate')
-let villain1 = new Villain('Sauron','230','Fire')
+let hero1 = new Hero('Gandalf',200, 55)
+let villain1 = new Villain('Sauron', 230, 50)
 
 console.log(hero1)
 console.log(villain1)
@@ -77,3 +78,10 @@ console.log(villain1)
 // *Bonus - Write a loop that will have the hero(use attack) and villain(use magic) attack each other 
 //          reducing the amount of health left and console.log each round.
 
+for(let i = 0; i < 4; i++){
+    hero1.attack()
+    villain1.magic()
+}
+
+console.log(hero1)
+console.log(villain1)

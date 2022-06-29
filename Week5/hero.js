@@ -78,10 +78,18 @@ console.log(villain1)
 // *Bonus - Write a loop that will have the hero(use attack) and villain(use magic) attack each other 
 //          reducing the amount of health left and console.log each round.
 
-for(let i = 0; i < 4; i++){
-    hero1.attack()
-    villain1.magic()
+// DON'T USE OR ||
+//while(villain1.health > 0 && hero1.health > 0)
+
+while(villain1.health > 0 && hero1.health > 0){
+    villain1.health -= hero1.attack()
+    hero1.health -= villain1.magic()
 }
+// for(let i = 0; i < 2; i++){
+
+//     villain1.health -= hero1.attack()
+//     hero1.health -= villain1.magic()
+// }
 
 console.log(hero1)
 console.log(villain1)

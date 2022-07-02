@@ -1,11 +1,9 @@
 // My Menu App
 
-let items = [];
-
+let itemNames = "";
 let cart = [];
-
-let timesAddedToCart = 0;
-
+let amounts = "";
+let quantities = [];
 
 class Item{
     constructor(name, quantity) {
@@ -16,58 +14,39 @@ class Item{
     addItemToCart(){
 
         let chosenItem = new Item(prompt("Enter item to add to your cart: "), prompt(`Please enter the amount you would like.`));
-    
-        while(chosenItem.quantity <= 0){
-            chosenItem.quantity = prompt(`Please enter an amount greater than 0.`);
-        }
         
-        //alert(`You added ${chosenItem.quantity} ${chosenItem.name}(s) to your cart.`);
+        alert(`You added ${chosenItem.quantity} ${chosenItem.name} to your cart.`);
     
-        items += (
-            ` ${chosenItem.name}
-                                    `);    
-        // modified
-        cart.push(chosenItem);
-        timesAddedToCart += 1;
+        itemNames = chosenItem.name;   
+        amounts = chosenItem.quantity;
+
+        quantities.push(amounts);
+        cart.push(itemNames);
     }
 
     viewCart(){
  
         if(cart.length == 0){
             alert("Your cart is empty.")
-        } else if(timesAddedToCart < cart.length){
-            //alert(`You have in your cart: ${items}`);
-            items = cart.forEach((element) => {
-                return element.name;
-            });
         } else{    
-            alert(`You have in your cart: ${items}`)
+            alert(`You have in your cart: ${quantities} ${cart}`)
         }  
     } 
 
     removeItemFromCart(){
-                
-        if (cart.length != 0 || null) {
-            let itemToRemove;
-            itemToRemove = prompt(`What item do you wish to remove: ${items}`);
-            //items = items.filter(element => element.name != `${itemToRemove}`);
-            cart = cart.filter(element => element.name != `${itemToRemove}`);
+
+        if (cart.length != 0) {
+            let itemToRemove = prompt(`What item do you wish to remove: ${cart}`);
+
+            cart = cart.filter(element => element != `${itemToRemove}`);
+            let quantityToRemove = prompt(`How much you want to remove: ${quantities}`);
+            quantities = quantities.filter(element => element != `${quantityToRemove}`);
+
         } else {
                 alert("Your cart is empty.")
         }
     }
     
-    viewAmount() {
-
-        if(cart.length == 0){
-        alert("Your cart is empty.")
-        } else {
-        // for(let i = 0; i < cart.length; i++){
-        //         items += `You have ${cart[i].quantity} of ${cart[i].name}.`;    
-        //     }
-            alert(`${cart[0].quantity} ${cart[0].name}(s)`);     //   <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-        }
-    } 
 }
 
 
@@ -92,9 +71,6 @@ class Menu extends Item{
                 case "4":
                     this.removeItemFromCart();
                     break;
-                case "5":
-                    this.viewAmount();
-                    break;
                 default:
                     alert("Invalid input");
             }       
@@ -104,15 +80,13 @@ class Menu extends Item{
     }
 
     showMenu(){
-        return prompt(`
-            Welcome
+        return prompt(`            Welcome
             Please choose one of the following options:
 
             1:  Exit application
             2:  Add a new item to your cart
             3:  View items in your cart
             4:  Remove item from cart
-            5:  View amounts of each item
         `);
     }
 }

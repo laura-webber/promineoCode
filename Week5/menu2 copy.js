@@ -11,7 +11,16 @@ class Item{
         this.quantity = parseInt(quantity);
     }
 
-    
+    viewAmount() {
+    if(cart.length == 0){
+        alert("Your cart is empty.")
+    } else {
+        // for(let i = 0; i < cart.length; i++){
+        //         items += `You have ${cart[i].quantity} of ${cart[i].name}.`;    
+        //     }
+            alert(cart[0].name + cart[0].quantity);
+        }
+    }
     addItemToCart(){
 
     let chosenItem = new Item(prompt("Enter item to add to your cart: "), prompt(`Please enter the amount you would like.`));
@@ -46,17 +55,6 @@ class Item{
             } else {
             alert("Your cart is empty.")
         }
-    }
-    
-    viewAmount() {
-        if(cart.length == 0){
-            alert("Your cart is empty.")
-        } else {
-            // for(let i = 0; i < cart.length; i++){
-            //         items += `You have ${cart[i].quantity} of ${cart[i].name}.`;    
-            //     }
-                alert(cart[0].name + cart[0].quantity);
-        }
     } 
 }
 
@@ -68,25 +66,22 @@ class Menu extends Item{
     
     start(){
         let option = this.showMenu();
-        while (option != 1){
+        
+        while (option != 0){
             switch (option){
                 case "1":
-                    option = 1;
-                    break;
-                case "2":
                     this.addItemToCart();
                     break;
-                case "3":
+                case "2":
                     this.viewCart();
                     break;
-                case "4":
+                case "3":
                     this.removeItemFromCart();
                     break;
-                case "5":
+                case "4":
                     this.viewAmount();
-                    break;
                 default:
-                    alert("Invalid input");
+                    option = 0;
             }       
             option = this.showMenu();
         }
@@ -94,14 +89,14 @@ class Menu extends Item{
     }
 
     showMenu(){
-        return prompt(`            Welcome
+        return prompt(`
             Please choose one of the following options:
 
-            1:  Exit application
-            2:  Add a new item to your cart
-            3:  View items in your cart
-            4:  Remove item from cart
-            5:  View amounts of each item
+            0:  Exit application
+            1:  Add a new item to your cart
+            2:  View items in your cart
+            3:  Remove item from cart
+            4:  View amounts of each item
         `);
     }
 }

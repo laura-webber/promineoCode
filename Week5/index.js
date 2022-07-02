@@ -102,3 +102,13 @@ console.log(user1.calculateFee("OVERDUE"));
 let user2 = new PromotionSender("GOLD");
 user2.sendNotification("YOU GET 30% OFF ON YOUR NEXT PURCHASE!");
 console.log(user2.calculateDiscount("GOLD"));
+
+
+
+// try {
+//     list.push("hello")
+// } catch(error){
+//     console.log(error)
+// }
+
+// console.log("goodbye")

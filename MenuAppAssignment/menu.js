@@ -35,7 +35,7 @@ class Item{
     removeItemFromCart(){
 
         if (cart.length != 0) {
-            let itemToRemove = prompt(`Which item/number do you wish to remove: ${cart.join(" ")}`);
+            let itemToRemove = prompt(`Enter item or number you wish to remove: ${cart.join(" ")}`);
 
             cart = cart.filter(element => element != `${itemToRemove}`);
 

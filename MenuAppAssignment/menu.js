@@ -3,7 +3,6 @@
 let itemNames = "";
 let cart = [];
 let amounts = "";
-let quantities = [];
 
 class Item{
     constructor(name, quantity) {
@@ -18,9 +17,9 @@ class Item{
         alert(`You added ${chosenItem.quantity} ${chosenItem.name} to your cart.`);
     
         itemNames = chosenItem.name;   
-        amounts = chosenItem.quantity;
+        amounts = `${chosenItem.quantity}`;
 
-        quantities.push(amounts);
+        cart.push(amounts);
         cart.push(itemNames);
     }
 
@@ -29,18 +28,16 @@ class Item{
         if(cart.length == 0){
             alert("Your cart is empty.")
         } else{    
-            alert(`You have in your cart: ${quantities} ${cart}`)
+            alert(`You have in your cart: ${cart.join(" ")}`)
         }  
     } 
 
     removeItemFromCart(){
 
         if (cart.length != 0) {
-            let itemToRemove = prompt(`What item do you wish to remove: ${cart}`);
+            let itemToRemove = prompt(`What item/number do you wish to remove: ${cart.join(" ")}`);
 
             cart = cart.filter(element => element != `${itemToRemove}`);
-            let quantityToRemove = prompt(`How much you want to remove: ${quantities}`);
-            quantities = quantities.filter(element => element != `${quantityToRemove}`);
 
         } else {
                 alert("Your cart is empty.")

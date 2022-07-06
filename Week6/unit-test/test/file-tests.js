@@ -1,4 +1,4 @@
-var expect = chai.expect;
+import {expect} from 'chai';
 
 describe('MyFunctions', function() {
     describe('#isTheSame', function() {

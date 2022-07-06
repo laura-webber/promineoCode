@@ -1,4 +1,4 @@
-var expect = require('expect');
+var expect = chai.expect;
 
 describe('MyFunctions', function() {
     describe('#isTheSame', function() {
@@ -8,7 +8,7 @@ describe('MyFunctions', function() {
         });
         
         it("should return false",function(){
-            var b = isTheSame(2,2);
+            var b = isTheSame(2,3);
             expect(b).to.be.false;
         });
     });

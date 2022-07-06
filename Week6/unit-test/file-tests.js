@@ -1,11 +1,11 @@
-var chai = require('chai');
+// var chai = require('chai');
 var expect = chai.expect;
 
 // var expect = require('expect');
 
-function isTheSame(input1,input2) {
-    return input1 === input2
-}
+// function isTheSame(input1,input2) {
+//     return input1 === input2
+// }
 
 describe('MyFunctions', function() {
     describe('#isTheSame', function() {

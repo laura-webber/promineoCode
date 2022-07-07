@@ -8,30 +8,6 @@
 // Write a Unit Test using Mocha and Chai for at least one of the functions you write.
 
 
-// class Player{
-//     constructor(player){
-//         this.player = player;
-
-//     }
-// }
-
-
-
-
-// class Deck {
-//     constructor(suit, rank){
-        
-//     }
-
-
-//     shuffleDeck(){
-
-//     }
-
-//     splitDeck(){
-
-//     }
-// }
 
 // class War{
 

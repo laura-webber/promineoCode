@@ -8,64 +8,113 @@
 // Write a Unit Test using Mocha and Chai for at least one of the functions you write.
 
 
-class Player{
-    constructor(player){
-        this.player = player;
+// class Player{
+//     constructor(player){
+//         this.player = player;
 
-    }
-}
-
-// class Deck {
-//     constructor(suit, value){
-//         this.suit = suit;
-//         this.value = value;
 //     }
 // }
 
 
+
+
 // class Deck {
-//     constructor(){
-//         this.length = 52;
-//         this.data = {"Ace", ""};
+//     constructor(suit, rank){
+        
+//     }
+
+
+//     shuffleDeck(){
+
+//     }
+
+//     splitDeck(){
+
 //     }
 // }
+
+// class War{
+
+//     prepareGame(){
+//         var suits = ["hearts", "clubs", "diamonds", "spades"]
+//         var ranks = ["Ace","2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
+//         var deck = []
+//         var shuffledCards = []
+
+//         for(counter = 0; counter < suits.length; counter++){
+//             for(i = 0; i < ranks.length; i++){
+//                 deck.push((ranks[i] + " of " + suits[counter]))
+//             }
+//         }
+//     }
+
+    
+//     startGame(){
+
+//     }
+
+// }
+
+
+
 
 var suits = ["hearts", "clubs", "diamonds", "spades"]
-var ranks = ["A","2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
+var ranks = ["14","2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"]
 var deck = []
-var shuffledDeck = []
+var shuffledCards = []
 
 for(counter = 0; counter < suits.length; counter++){
     for(i = 0; i < ranks.length; i++){
-        deck.push((ranks[i] + " of " + suits[counter]))
+        deck.push((ranks[i]+ " of " + suits[counter]))
     }
 }
-
-
-
-
-
-var counter = 52
-while(counter != 0){
-    var card;
-    var index = deck[Math.floor(Math.random()*deck.length)]
     
-    shuffledDeck.push(index)
+        while(shuffledCards.length < 52){
+            var card = deck[Math.floor(Math.random()*deck.length)]
+            // console.log(card)
+            if(!shuffledCards.includes(card)){
+                shuffledCards.push(card)
+            }
+        }
 
-    deck.splice(index, 1)
-    counter--
-    
+// Shuffling the cards
+// console.log(shuffledCards)
+
+var player1 = [];
+var player2 = [];
+
+while(player1.length < 26){
+    var card = shuffledCards.splice(0,1)
+    player1.push(card)  
 }
 
-// while(deck.length != 0){
-//     var card;
-    
-//     card = deck.splice(index,1);
-//     shuffledDeck.push(card);
+player2 = shuffledCards;
+
+
+// var player1ranks = player1.map(element => {
+//     return Number(element);
+// });
+// var player2ranks = player2.map(element => {
+//     return Number(element);
+// });
+
+
+
+// cards each player was dealt
+
+// console.log(player1)
+// console.log(player2)
+
+
+// Displays each turn
+// for(i = 0; i < 25; i++){
+//     console.log(`Player1: ${player1[i]}    `      +    `Player2: ${player2[i]}`)
 // }
 
 
-//  console.log(index)
-// console.log(shuffledDeck)
+// Displays each turn with ranks instead of strings
 
-console.log(shuffledDeck)
+for(i = 0; i < 25; i++){
+    
+    console.log(`Player1: ${player1[i]}    `      +    `Player2: ${player2[i]}`)
+}

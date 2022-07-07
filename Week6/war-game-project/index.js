@@ -33,6 +33,7 @@ class Player{
 var suits = ["hearts", "clubs", "diamonds", "spades"]
 var ranks = ["A","2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
 var deck = []
+var shuffledDeck = []
 
 for(counter = 0; counter < suits.length; counter++){
     for(i = 0; i < ranks.length; i++){
@@ -40,5 +41,31 @@ for(counter = 0; counter < suits.length; counter++){
     }
 }
 
-console.log(deck)
 
+
+
+
+var counter = 52
+while(counter != 0){
+    var card;
+    var index = deck[Math.floor(Math.random()*deck.length)]
+    
+    shuffledDeck.push(index)
+
+    deck.splice(index, 1)
+    counter--
+    
+}
+
+// while(deck.length != 0){
+//     var card;
+    
+//     card = deck.splice(index,1);
+//     shuffledDeck.push(card);
+// }
+
+
+//  console.log(index)
+// console.log(shuffledDeck)
+
+console.log(shuffledDeck)

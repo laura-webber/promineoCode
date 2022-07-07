@@ -11,12 +11,34 @@
 class Player{
     constructor(player){
         this.player = player;
+
     }
 }
 
-class Deck {
-    constructor(suit, value){
-        this.suit = suit;
-        this.value = value;
+// class Deck {
+//     constructor(suit, value){
+//         this.suit = suit;
+//         this.value = value;
+//     }
+// }
+
+
+// class Deck {
+//     constructor(){
+//         this.length = 52;
+//         this.data = {"Ace", ""};
+//     }
+// }
+
+var suits = ["hearts", "clubs", "diamonds", "spades"]
+var ranks = ["A","2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
+var deck = []
+
+for(counter = 0; counter < suits.length; counter++){
+    for(i = 0; i < ranks.length; i++){
+        deck.push((ranks[i] + " of " + suits[counter]))
     }
 }
+
+console.log(deck)
+

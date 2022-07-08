@@ -3,8 +3,9 @@ class Player{
         this.theirName = name;
     }
 
-    createPlayer(){
-        var player = new Player(prompt("What's your name?"))
+    createPlayer(name){
+        var player = new Player()
+        player.theirName = name
         player.theirScore = 0
         return player
     }
@@ -18,21 +19,27 @@ class Deck {
     }
 
     createDeck(){
-        var deckOfCards = []
         var suits = ["hearts", "clubs", "diamonds", "spades"]
         var ranks = ["Ace","2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
+        var deck = []
+
+
         for(var counter = 0; counter < suits.length; counter++){
             for(var i = 0; i < ranks.length; i++){
-                deckOfCards.push((ranks[i]+ " of " + suits[counter]))
+                deck.push((ranks[i]+ " of " + suits[counter]))
+            }
+    } return deck      
+}
+
+    shuffleDeck(deck){
+        var shuffledCards = []
+        while(shuffledCards.length < 52){
+            var card = deck[Math.floor(Math.random()*deck.length)]
+            if(!shuffledCards.includes(card)){
+                shuffledCards.push(card)
             }
         }
-
-        console.log(deckOfCards)
-        // return deckOfCards
-    }
-
-    shuffleDeck(){
-        var shuffledCards = []
+        return shuffledCards
     }
 
     splitDeck(){
@@ -52,16 +59,16 @@ class War extends Player{
 
 
     start(){
-        var player1 = this.createPlayer()
-        var player2 = this.createPlayer()
-        var deck = new Deck()
-        deck.createDeck()
+        var player1 = this.createPlayer('Player 1')
+        var player2 = this.createPlayer('Player 2')
+        var deckOfCards = new Deck()
+        var a = deckOfCards.createDeck()
+        var shuffled = deckOfCards.shuffleDeck(a)
 
-        console.log(player1)
+        console.log(shuffled)
 
-        console.log(player2)
-
-        
+        // console.log(a)
+        // console.log(shuffled)        
 
     }
     

@@ -132,16 +132,20 @@ class War extends Player{
         
 
          for(var i = 0; i < 26; i++){
-             console.log("Player 1  Player 2\n" + 
-             `${player1Cards[i]}         ${player2Cards[i]}`)
             if (hand1[i] > hand2[i]){
-                console.log(player1.theirName + " WINS round " + (i+1))
+                console.log("Player 1           Player 2\n\n" + 
+             `${player1Cards[i]}         ${player2Cards[i]}\n\n`+
+                player1.theirName + " WINS round " + (i+1) + "\n")
                 player1.theirScore++
             } else if(hand1[i] < hand2[i]){
-                console.log(player2.theirName + " WINS round " + (i+1))
+                console.log("Player 1           Player 2\n\n" + 
+             `${player1Cards[i]}         ${player2Cards[i]}\n\n`+
+                player2.theirName + " WINS round " + (i+1) + "\n")
                 player2.theirScore++
             }else{
-                console.log("It's a TIE!")
+                console.log("Player 1           Player 2\n\n" + 
+             `${player1Cards[i]}         ${player2Cards[i]}\n\n` +
+                "It's a TIE!")
             }
 
          }

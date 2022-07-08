@@ -85,6 +85,9 @@ class War extends Player{
 
         hand1 = playersHands[0].map(item => {
             switch(item){
+                case "1":
+                    return 10;
+                    break;
                 case "J":
                     return 11;
                     break;
@@ -104,6 +107,9 @@ class War extends Player{
 
         hand2 = playersHands[1].map(item => {
             switch(item){
+                case "1":
+                    return 10;
+                    break;
                 case "J":
                     return 11;
                     break;
@@ -166,7 +172,7 @@ class War extends Player{
 
         var b = this.compareHands(playersHands, player1, player2)
 
-        console.log(b)
+        // console.log(b)
 
         
 

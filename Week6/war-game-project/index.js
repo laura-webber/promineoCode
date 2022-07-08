@@ -153,11 +153,11 @@ class War extends Player{
 
          if(player1.theirScore > player2.theirScore)
          {
-             console.log(player1.theirName + " WON the game    " + player1.theirScore + "  -  " + player2.theirScore)      
+             console.log("\n" +player1.theirName + " WON the game    " + player1.theirScore + "  -  " + player2.theirScore)      
          } else if(player1.theirScore < player2.theirScore){
-            console.log(player2.theirName + " WON the game     " + player2.theirScore + "  -  " + player1.theirScore)
+            console.log("\n" +player2.theirName + " WON the game     " + player2.theirScore + "  -  " + player1.theirScore)
          } else
-            console.log("They tied    " + player1.theirScore + "  -  " + player2.theirScore)
+            console.log("\nThey tied    " + player1.theirScore + "  -  " + player2.theirScore)
      }
 
     start(){

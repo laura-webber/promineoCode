@@ -1,8 +1,11 @@
+// Here I created a class player with a method to create a new player
+
 class Player{
     constructor(name){
         this.theirName = name;
     }
 
+    // this method creates a player object with two properties: name and score. And returns that object
     createPlayer(name){
         var player = new Player()
         player.theirName = name
@@ -12,18 +15,15 @@ class Player{
     
 }
 
+// In this class Deck, I created 3 unique methods: createDeck(), shuffleDeck() and splitDeck()
 class Deck {
-    constructor(suit, value){
-        this.cardSuit = suit;
-        this.cardValue = value;
-    }
 
+    // This method will iterate through 2 sets of arrays and store the result into a new array object called deck and returns it
     createDeck(){
         var suits = ["hearts", "clubs", "diamonds", "spades"]
         var ranks = ["Ace","2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
         var deck = []
-
-
+       
         for(var counter = 0; counter < suits.length; counter++){
             for(var i = 0; i < ranks.length; i++){
                 deck.push((ranks[i]+ " of " + suits[counter]))
@@ -31,6 +31,8 @@ class Deck {
     } return deck      
 }
 
+    // This method receives a deck of cards as a parameter, then creates a new array object and selects a random index number from 0 to 52 to pull an element from the passed deck of cards 
+    // an stores that element in the new shuffledCards array.
     shuffleDeck(deck){
         var shuffledCards = []
         while(shuffledCards.length < 52){
@@ -42,6 +44,8 @@ class Deck {
         return shuffledCards
     }
 
+    // This method receives an array containing cards and a number that functions as an index to tell the method splice() where to start. 
+    // It then creates a new array with half of the cards of the passed array and returns it
     splitDeck(cards, index){
         var playerCards = [];
 
@@ -50,19 +54,15 @@ class Deck {
             playerCards.push(card)  
         }
 
-        // player2Cards = shuffledCards;
         return playerCards
-    }
-
-    
+    }    
 }
 
-
+// This class has 3 methods: getFirstChar(), compareHands() and start(). Inside this class is where the game of war happens
 class War extends Player{
     constructor(name, score){
         super(name);
-        this.theirScore = score
-        
+        this.theirScore = score    
     }
 
     getfirstChar(player1Cards, player2Cards, index){
@@ -160,6 +160,9 @@ class War extends Player{
             console.log("\nThey tied    " + player1.theirScore + "  -  " + player2.theirScore)
      }
 
+    // This method creates 2 Player objects and calls the class Deck() to create a deck of cards, shuffle the cards, split the cards in half and store 2 arrays, one for each player's cards.
+    // It then creates 2 other arrays with only the first character of the playersCards array
+    // It calls the method compare to compare each player's hands 
     start(){
         var player1 = this.createPlayer('Player 1')
         var player2 = this.createPlayer('Player 2')
@@ -176,10 +179,9 @@ class War extends Player{
         var b = this.compareHands(playersHands, player1Cards, player2Cards, player1, player2)
 
     }
-    
-    
 }
 
+// Here I start the game by creating an instance of the class War and storing it inside the newGame variable. Then I call the method start() to start the game.
 var newGame = new War();
 newGame.start()
 

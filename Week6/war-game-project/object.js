@@ -42,8 +42,16 @@ class Deck {
         return shuffledCards
     }
 
-    splitDeck(){
+    splitDeck(cards, index){
+        var playerCards = [];
 
+        while(playerCards.length < 26){
+            var card = cards.splice(index,1)
+            playerCards.push(card)  
+        }
+
+        // player2Cards = shuffledCards;
+        return playerCards
     }
 
     
@@ -57,19 +65,115 @@ class War extends Player{
         
     }
 
+    getfirstChar(player1Cards, player2Cards, index){
+        var playersHands = []
+        var player1Hand = player1Cards.map(element =>{return element[index]})
+        var player2Hand = player2Cards.map(element => {return element[index]})
+
+        playersHands.push(player1Hand)
+        playersHands.push(player2Hand)
+        
+        return playersHands
+
+    }
+
+    compareHands(playersHands, player1, player2){
+        player1.theirScore
+        console.log(playersHands)
+        var hand1 = [];
+        var hand2 = [];
+
+        hand1 = playersHands[0].map(item => {
+            switch(item){
+                case "J":
+                    return 11;
+                    break;
+                case "Q":
+                    return 12;
+                    break;
+                case "K":
+                    return 13;
+                    break;
+                case "A":
+                    return 14;
+                default:
+                    return Number(item)
+            }
+            
+        })
+
+        hand2 = playersHands[1].map(item => {
+            switch(item){
+                case "J":
+                    return 11;
+                    break;
+                case "Q":
+                    return 12;
+                    break;
+                case "K":
+                    return 13;
+                    break;
+                case "A":
+                    return 14;
+                default:
+                    return Number(item)
+            }
+            
+        })
+
+        
+
+         for(var i = 0; i < 26; i++){
+             console.log("Player 1  Player 2\n" + 
+             `${playersHands[0][i]}         ${playersHands[1][i]}`)
+            if (hand1[i] > hand2[i]){
+                console.log(player1.theirName + " WINS round " + (i+1))
+                player1.theirScore++
+            } else if(hand1[i] < hand2[i]){
+                console.log(player2.theirName + " WINS round " + (i+1) )
+                player2.theirScore++
+            }else{
+                console.log("It's a TIE!")
+            }
+
+         }
+
+         var tally = [player1.theirScore, player2.theirScore]
+         
+         console.assert(tally)
+
+         if(tally[0] > tally[1])
+         {
+             console.log(player1.theirName + " WON the game")      
+         } else if(tally[0] < tally[1]){
+            console.log(player2.theirName + " WON the game")
+         } else
+            console.log("They tied")
+     }
 
     start(){
         var player1 = this.createPlayer('Player 1')
         var player2 = this.createPlayer('Player 2')
+        var index = 0;
         var deckOfCards = new Deck()
         var a = deckOfCards.createDeck()
         var shuffled = deckOfCards.shuffleDeck(a)
+        var player1Cards = deckOfCards.splitDeck(shuffled, 0)
+        player1Cards = player1Cards.map(item => {return item[0]})
+        var player2Cards = shuffled
 
-        console.log(shuffled)
+        var playersHands = this.getfirstChar(player1Cards, player2Cards, 0)
 
-        // console.log(a)
-        // console.log(shuffled)        
+        var b = this.compareHands(playersHands, player1, player2)
 
+        console.log(b)
+
+        
+
+        // console.log(shuffled)
+
+        // console.log(player1Cards)
+        // console.log(player2Cards)
     }
     
     
@@ -78,15 +182,3 @@ class War extends Player{
 var newGame = new War();
 newGame.start()
 
-
-
-
-
-// console.log(typeof(object1))
-// console.log((object1.name))
-// console.log((object1.score))
-
-// show(){
-//     console.log(`Player ${this.playername}`)
-
-// }

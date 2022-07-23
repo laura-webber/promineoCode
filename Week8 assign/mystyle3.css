@@ -1,0 +1,106 @@
+body {
+    background-image:url("https://64.media.tumblr.com/0f3927f0017e84b9c6ec69901c5a825a/tumblr_n9lwm7N7VX1tz79vpo1_r1_1280.gifv");
+    color:#e1c0cc;
+}
+
+a:link {
+    color:#ff4c4c
+}
+
+a:visited {
+    color:#ff4c4c
+}
+
+a:active {
+    color:#ff4c4c
+}
+
+.header {
+
+    display: grid;
+    unicode-bidi: embed;
+    font-family: monospace;
+    white-space: pre;
+    border-style: none;
+    
+}
+
+.box1 {
+    font-family: 'Helvetica', sans-serif;
+}
+
+#center {
+    position: absolute;
+}
+
+table,th,td{
+    border: 2px solid; 
+    width:200px;
+    height: auto;
+    background-color: #04AA6D;
+    color: white;
+    text-align: center;
+    
+}
+
+#sign{
+    border:8px; 
+    border-style:dotted;
+    padding: 1em;
+}
+
+#sign:hover{
+    border: 20px;
+    border-style: dotted;
+    
+}
+
+.img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+
+.hov td:nth-child(1n){
+    padding: 8px;
+    
+}
+
+
+
+.hov:hover{
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    
+}
+
+#message{
+    position: fixed;
+    font-family: "Georgia";
+    padding-left: 4px;
+    padding-right: 4px;
+    text-shadow: 2px 2px green;
+    
+    
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+    
+    width:fit-content;
+    text-transform: uppercase;
+    color: white;
+    background-color: #04AA6D;
+    
+    }
+
+tr:hover, td:hover{
+    background-color: orange;
+}
+
+.h8{
+    
+    text-align: center;
+    text-decoration-line: underline;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 38px;
+}

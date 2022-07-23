@@ -1,0 +1,73 @@
+body {
+    background-image:url("https://64.media.tumblr.com/0f3927f0017e84b9c6ec69901c5a825a/tumblr_n9lwm7N7VX1tz79vpo1_r1_1280.gifv");
+    color:#c0d3e1;
+}
+
+a:link {
+    color:#ff4c4c
+}
+
+a:visited {
+    color:#ff4c4c
+}
+
+a:active {
+    color:#ff4c4c
+}
+
+.header {
+
+    display: grid;
+    unicode-bidi: embed;
+    font-family: monospace;
+    white-space: pre;
+    border-style: none;
+    
+}
+
+.box1 {
+    font-family: 'Helvetica', sans-serif;
+}
+
+table,th,td{
+    border: 1px solid; 
+    width:200px;
+    height: auto;
+}
+
+::placeholder {
+    color: red;
+    opacity: 1;
+  }
+
+
+
+#big:hover{
+    font-size:x-large
+}
+
+.img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%
+  }
+
+  #message{
+    position: fixed;
+    font-family: "Georgia";
+    padding-left: 4px;
+    padding-right: 4px;
+    text-shadow: 2px 2px green;
+    
+    
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+    
+    width:fit-content;
+    text-transform: uppercase;
+    color: white;
+    background-color: #04AA6D;
+    
+    }

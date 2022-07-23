@@ -1,0 +1,128 @@
+body {
+    background-image:url("https://64.media.tumblr.com/0f3927f0017e84b9c6ec69901c5a825a/tumblr_n9lwm7N7VX1tz79vpo1_r1_1280.gifv");
+    color:#8fce00;
+}
+
+a:link {
+    color:#ff4c4c
+}
+
+a:visited {
+    color:#ff4c4c
+}
+
+a:active {
+    color:#ff4c4c
+}
+
+.header {
+    background: rgba(76, 175, 80, 0.3);
+    max-width: 250px;
+    font-family: system-ui;
+    font-size: large;
+    white-space: pre;
+    border-style: solid
+    
+}
+
+.header:hover{
+    background: rgba(219, 46, 66, 0.5)
+}
+
+li:hover{
+    color:blue;
+}
+
+#hov:hover{
+    
+    font-size: 39px;
+    
+}
+
+
+
+#hov2{
+    background-color: gray;
+    padding:2px;
+    border-style: solid;
+    font-family: 'American Typewriter', sans-serif;
+    
+}
+
+#hov2:hover{
+
+    color:#ff4c4c
+}
+
+#right {
+
+    float: right;
+
+   
+}
+   
+.box1 {
+    font-family: "Didot", serif ;
+    text-align: left;
+    
+}
+
+#text{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    float:right;
+
+    
+}
+
+#box2 {
+    display:inline;
+    font-size: 28px;
+    font-family: "Georgia", serif ;
+    font-weight: bold;
+    float: right;
+    text-shadow: 3px 3px #000000;
+    color: white;
+    
+}
+
+
+
+#arrow {
+    opacity: 50%;
+    width: 45%;
+}
+
+.img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    opacity:40%;
+    border: 5px solid #ffffff
+  }
+
+.floatLeft{
+    float:left;
+}
+
+.img:hover{
+    opacity: 100%;
+}
+  #MonaLisa {
+    max-width: fit-content;
+    width: 90%;
+  } 
+      
+
+  #MonaLisa:hover{
+
+      height:500px; 
+      width: auto;
+      transform: translate(-10rem, -30ex);
+  }
+
+.h2{
+    display: inline-block;
+}

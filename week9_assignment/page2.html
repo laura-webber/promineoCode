@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    
+    <style>
+        body{font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;text-align: justify;}
+      
+        #box{border-radius:20px;background-color:rgba(246, 246, 246, 0.838);padding:10px; margin:3px}
+        
+        img {display: block;margin-left: auto;margin-right: auto;width: 300px;}
+  
+        #center{display: block;margin-left: auto;margin-right: auto}
+
+        input{margin:3px}
+        
+      </style>
+    
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Web Palace</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Menu
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">Games</a>
+                  <a class="dropdown-item" href="#">FAQ</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        </nav>
+
+
+<br><br>
+
+        <div class="container">
+        <table class="table table-primary table-hover">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Bob</td>
+                <td>bob@gmail.com</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Susan</td>
+                <td>susan@gmail.com</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Meg</td>
+                <td>meg@yahoo.com</td>
+            </tr>
+        </table>
+        
+        <div class="row">
+            <div class="col-lg">
+             
+            </div>
+           
+            <div class="col-lg">
+   
+                <form>
+                    <div class="form-group"> 
+                             
+                        <input type="email" class="form-control" name="email" placeholder="Enter your e-mail address here">
+                    </div>
+                    <div class="form-group">
+                        
+                        <input type="text" class="form-control" name="name" placeholder="Name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="favMarvelMovie" placeholder="What's your favorite Marvel movie?">
+                    </div>
+                    <input type="checkbox" name="checkbox"> I would like to receive
+                        promotional emails.
+                    <br>
+                    
+                    <br><button id="center" type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                 
+            </div>
+           
+            <div class="col-lg">
+             
+            </div>
+        </div>
+
+        <br>
+    
+        <div class="row">
+         <div class="col-lg">
+          
+         </div>
+        
+         <div class="col-lg">
+
+          <a id="center" href="index.html" class="btn btn-secondary" role="button">Return Home</a>
+              
+         </div>
+        
+         <div class="col-lg">
+          
+         </div>
+        </div>
+    </div>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+</body>
+</html>

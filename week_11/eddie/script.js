@@ -1,46 +1,49 @@
-const myForm = document.getElementById('myForm')
-const email = document.getElementById('email')
-const name = document.getElementById('name')
+$(document).ready(() => {
+    const emailInfo = [
+        {email: 'test@email.com', name: 'Eddie'},
+        {email: 'email@email.com', name: 'Tobi'}
+    ];
 
-const content = document.getElementById('content')
-
-const emailInfo = [
-    {email: 'test@email.com', name: 'Rodrigo'},
-    {email: 'email@email.com', name: 'Joe'}
-];
-
-emailInfo.forEach(person => {
-    const infoBox = document.createElement('div');
-    infoBox.classList.add('info-box');
-
-    infoBox.innerText = `${person.email} ${person.name}`;
-    content.append('infoBox');
-})
-
-const buildInfoList = () => {
-    content.innerHTML = '';
-    emailInfo.forEach(person => {
-        const infoBox = document.createElement('div');
-        infoBox.classList.add('info-box');
-
-        infoBox.innerText = `${person.email} ${person.name}`;
-        content.append(infoBox);
-    })
-}
-
-buildInfoList();
-
-myForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const data = {
-        email: email.value,
-        name: name.value
+    const buildInfoList = () => {
+        $('#content').empty();
+        emailInfo.forEach(person => {
+            $('#content').append(
+                `<div class="info-box"> 
+                ${person.email} ${person.name} 
+                </div>`
+            )
+        });
     };
-    //console.log(data)
-    emailInfo.push(data);
+
     buildInfoList();
-    myForm.reset();
-})
+
+    $('#myForm').submit(event => {
+        event.preventDefault();
+        const data = {
+            email: $('#email').val(),
+            name: $('#name').val()
+        };
+        emailInfo.push(data);
+        buildInfoList();
+        $('#myForm').trigger('reset');
+    });
+
+    $('#get-button').click(() => {
+        $.get('https://jsonplaceholder.typicode.com/posts/1', (data) => {
+            console.log(data);
+        });
+    });
+
+    $('#post-button').click(() => {
+        $.post(
+            'https://jsonplaceholder.typicode.com/posts', 
+            {title: 'Testing', body: 'Testing text here'},
+            (data) => {
+                console.log(data);
+            }
+        );
+    });
+});
 
 // Build a form that has a title and a body input 
     // when pressing submit the form should make a post request to 
